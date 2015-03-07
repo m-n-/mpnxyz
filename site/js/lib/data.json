@@ -1,0 +1,38 @@
+{
+	"about":{
+		"name":"Michael P. Navarro",
+		"title":"Web Developer / Internet Privacy Enthusiast",
+		"email":"m@mpn.xyz"
+	},
+	"projects":{
+		"encrypus": {
+			"name":"Michael P. Navarro",
+			"title":"Creator",
+			"about":"Encryp.us is an encrypted chat application for the web"
+		},
+		"number26": {
+			"name":"Number 26",
+			"title":"Web Developer",
+			"about":"Number 26 is a Fin-Tech startup with iOS, Android, and WebApp for an elegant banking experience"
+		},
+		"blockmagazin": {
+			"name":"Block Magazin",
+			"title":"Web Developer",
+			"about":"Block Magazin is alternative German printed magazine."
+		}
+	},
+	"links":{
+		"github": {
+			"name":"My Github Profile",
+			"url":"Creator"
+		},
+		"stackoverflow": {
+			"name":"My Stackoverflow Profile",
+			"url":"Creator"
+		},
+		"github": {
+			"name":"My Github Profile",
+			"url":"Creator"
+		}
+	}
+}
