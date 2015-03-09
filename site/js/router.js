@@ -20,12 +20,14 @@ define([
 	var router = new app.Router;
 
 	router.on('route:home', function() {
-		require(['views/home'], function() {
+		require(['views/home','views/skeleton'], function() {
+			new app.Skeleton();
 			new app.Home();
 		});
 	});
 
 	router.on('route:about', function() {
+		$("#app").empty();
 		console.log("hey");
 	});
 
@@ -38,7 +40,7 @@ define([
 			}
 		});
 	});
-
+	
 	Backbone.history.start();
 });
 

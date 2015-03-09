@@ -9,14 +9,14 @@ define([
 ], function($,_,Backbone,DataModel,homeView){
 
 	app.Home = Backbone.View.extend({
-		el: "#app",
+		el: "#current-view",
 
 		initialize: function() {
 			this.render();
 		},
 
 		events: {
-
+			'click .next':'next'
 		},
 
 		template: _.template(homeView),
@@ -30,8 +30,14 @@ define([
 					myInfo = data.get("about");
 					var homeTemplate = that.template(myInfo);
 					that.$el.append(homeTemplate);
+					$("#home > div").addClass("main-animate");
+					$("#home").addClass("page-animate").removeClass('see-through');
 				}
 			});
+		},
+
+		next: function() {
+			console.log("hi");
 		}
 	});
 });
