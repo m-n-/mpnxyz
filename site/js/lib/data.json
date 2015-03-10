@@ -30,6 +30,26 @@
 			{
 				"name":"Stackoverflow",
 				"url":"http://stackoverflow.com/pwneth"
+			},
+			{
+				"name":"Mailbox.org",
+				"url":"http://mailbox.org/"
+			},
+			{
+				"name":"Digital Ocean",
+				"url":"https://www.digitalocean.com/?refcode=ae1758e46bf8"
+			},
+			{
+				"name":"Open Tech School",
+				"url":"http://opentechschool.org/"
+			},
+			{
+				"name":"ownCloud",
+				"url":"http://owncloud.org/"
+			},
+			{
+				"name":"Cryptoparty",
+				"url":"http://cryptoparty.in/"
 			}
 		]
 	}

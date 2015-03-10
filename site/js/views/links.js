@@ -12,7 +12,6 @@ define([
 		el: "#current-view",
 
 		initialize: function() {
-			this.$el.empty();
 			this.render();
 		},
 
@@ -23,13 +22,15 @@ define([
 			if (app.myInfo) {
 				var viewTemplate = that.template(app.myInfo);
 				that.$el.append(viewTemplate);
+				$("#links").addClass('page-animate');
 			} else {
 				var data = new app.Data();
 	 			data.fetch({
 					success: function(data) {
-						app.myInfo = data.get("data");
+						app.myInfo = data.toJSON();
 						var viewTemplate = that.template(app.myInfo);
 						that.$el.append(viewTemplate);
+						$("#links").addClass('page-animate');
 					}
 				});
 			}

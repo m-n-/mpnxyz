@@ -9,7 +9,7 @@ define([
 	app.Router = Backbone.Router.extend({
 		routes: {
 			"":"home",
-			"about":"about",
+			"links":"links",
 			"projects":"projects"
 		},
 		initialize: function() {
@@ -26,9 +26,11 @@ define([
 		});
 	});
 
-	router.on('route:about', function() {
-		$("#app").empty();
-		console.log("hey");
+	router.on('route:links', function() {
+		require(['views/links','views/skeleton'], function() {
+			new app.Skeleton();
+			new app.Links();
+		});
 	});
 
 	router.on('route:projects', function() {	
