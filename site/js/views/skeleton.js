@@ -28,8 +28,19 @@ define([
 
 		showSection: function(section) {
 			// var this_data = this.data("name");
-			var selected_section = $(section.currentTarget);
-			console.log($(section.currentTarget).data("name"));
+			var selected_section = $(section.currentTarget).data("name");
+			
+			switch(selected_section){
+				case "cv":
+					break;
+				case "links":
+					require(['views/links'], function() {
+						new app.Links();
+					});
+					break;
+				case "work":
+					break;
+			}
 		}
 	});
 });

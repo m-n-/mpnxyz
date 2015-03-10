@@ -1,0 +1,12 @@
+<div class="page" id="links">
+	<%  
+		_.each(links, function(link) { 
+			var name = link.name;
+			var url = link.url;
+			console.log(link.name);
+	%>
+		<div><a href="<%= url %>"><%= name %></a></div>
+	<% 
+		}); 
+	%>
+</div>
