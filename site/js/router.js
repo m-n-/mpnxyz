@@ -34,12 +34,9 @@ define([
 	});
 
 	router.on('route:projects', function() {	
-		var data = new app.Data();
-		data.fetch({
-			success: function(data) {
-				var myProjects = data.get("projects");
-				console.log(myProjects);
-			}
+		require(['views/projects','views/skeleton'], function() {
+			new app.Skeleton();
+			new app.Projects();
 		});
 	});
 	

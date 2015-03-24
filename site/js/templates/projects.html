@@ -1,0 +1,18 @@
+<div class="page" id="projects">
+	<%  
+		_.each(data.projects, function(project) { 
+	%>
+		<a href="<%= project.url %>">
+			<div class="project" style="background: url('<%= project.img %>');">
+				<div class="overlay"></div>
+				<div class="overlay_front">
+					<div class="name"><%= project.name %></div>
+					<div class="title"><%= project.title %></div>
+					<div class="about"><%= project.about %></div>
+				</div>
+			</div>
+		</a>
+	<% 
+		}); 
+	%>
+</div>

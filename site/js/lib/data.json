@@ -9,17 +9,23 @@
 			"encrypus": {
 				"name":"Encryp.us",
 				"title":"Creator",
-				"about":"Encryp.us is an encrypted chat application for the web"
+				"about":"Encryp.us is an encrypted chat application for the web",
+				"url":"https://encryp.us",
+				"img":"/img/project_encryp.png"
 			},
 			"number26": {
 				"name":"Number 26",
 				"title":"Web Developer",
-				"about":"Number 26 is a Fin-Tech startup with iOS, Android, and WebApp for an elegant banking experience"
+				"about":"Number 26 is a Fin-Tech startup with iOS, Android, and WebApp for an elegant banking experience",
+				"url":"https://number26.de",
+				"img":"/img/project_n26.png"
 			},
 			"blockmagazin": {
 				"name":"Block Magazin",
 				"title":"Web Developer",
-				"about":"Block Magazin is alternative German printed magazine."
+				"about":"Block Magazin is alternative German printed magazine.",
+				"url":"http://block-magazin.de",
+				"img":"/img/project_block.png"
 			}
 		},
 		"links": [
