@@ -3,6 +3,10 @@
 @import url(http://fonts.googleapis.com/css?family=Cinzel+Decorative);
 @import url(http://fonts.googleapis.com/css?family=Asap);
 
+/** {
+  overflow-x: hidden;
+}*/
+
 body, html {
     background: #fff;
     color: #000;
@@ -57,14 +61,25 @@ body, html {
 }
 
 #home_btn {
-  position: fixed;
-  background-color: #fff;
   top: 80px;
   right: 20px;
+  line-height: 50px;
+  display: none;
+}
+
+#about_btn {
+  bottom: 20px;
+  right: 20px;
+  font-size: 30px;
+  line-height: 55px;
+}
+
+#home_btn, #about_btn {
+  position: fixed;
+  background-color: #fff;
   color: #8C271E;
   height: 50px;
   width: 50px;
-  line-height: 50px;
   text-align: center;
   z-index: 2;
   cursor: pointer;
@@ -74,11 +89,31 @@ body, html {
   box-shadow: 0 0 5px rgba(0,0,0,.2);
 }
 
-#home_btn:hover {
+#home_btn:hover, #about_btn:hover {
   background-color: #8C271E;
   color: #fff;
   transition: background-color 500ms , color 500ms;
 }
+
+#about_bubble {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 90px;
+  padding: 0 20px;
+  box-shadow: 0 0 5px rgba(0,0,0,.2);
+  border-radius: 5px;
+  line-height: 50px;
+}
+
+#about_bubble:after {
+  background: #000;
+  left: 20;
+  bottom: 0;
+  width: 20px;
+  height: 20px;
+}
+
 
 #current-view {
   margin-top: 55px;
@@ -99,12 +134,13 @@ body, html {
 
 .section_title {
   width: 100%;
-  color: rgb(255, 255, 255);
+  color: #fff;
   font-size: 50px;
-  line-height: 100px;
   background: #8C271E;
   text-align: center;
   font-family: 'Asap', sans-serif;
+  overflow-y: hidden;
+  line-height: 100px;
 }
 
 /*home*/
@@ -129,10 +165,12 @@ body, html {
 #projects {
   max-width: 1024px;
   margin: 0 auto;
-  overflow-x: auto;
+  overflow-x: hidden;
 }
 
 #projects .project {
+  margin-left: 10000px;
+  visibility: hidden;
   display: inline-block;
   float:left;
   width: 300px;
@@ -172,7 +210,7 @@ body, html {
   visibility: visible;
   opacity: .8 !important;
   width: 300px;
-  box-shadow: 0 0 20px rgba(0,0,0,.4);
+  box-shadow: 0 0 10px rgba(0,0,0,.4);
   background: #8C271E;
   transition: width 500ms,visibility 500ms, opacity 500ms;
 }
@@ -202,6 +240,7 @@ body, html {
   text-shadow: 1px 1px #000;
   border: 0px solid;
   font-family: 'Asap', sans-serif;
+  box-shadow: 0 0 5px rgba(0,0,0,0.4);
   /*border: 1px solid rgb(0,0,0);*/
 /*  box-shadow: 0px 1px 0px 0px #8C271E, 0px 3px 0px -1px #8C271E, 0px 5px 0px -2px #8C271E, 
   0px 7px 0px -3px #8C271E, 0px 9px 0px -4px #8C271E, 0px 11px 0px -5px #8C271E, 
@@ -227,16 +266,40 @@ body, html {
 .page-animate {
     animation-duration: 1s;
     animation-name: page-animate;
+    -webkit-animation-duration: 1s;
+    -webkit-animation-name: page-animate;
 }
 
 
 @keyframes page-animate {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+@-webkit-keyframes page-animate {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.project-animate {
+  visibility: visible !important;
+  margin-left: 10px !important;
+  transition: visibility 500ms,margin-left 500ms;
+}
+
+.title-animate {
+    animation-duration: 1s;
+    animation-name: title-animate;
+    -webkit-animation-duration: 1s;
+    -webkit-animation-name: title-aniemate;
+}
+
+@keyframes title-animate  {
+    from {margin-top: -100px;}
+    to {margin-top: 0px;}
+}
+@-webkit-keyframes title-animate  {
+    from {margin-top: -100px;}
+    to {margin-top: 0px;}
 }
 
 .main-animate {
@@ -313,6 +376,10 @@ body, html {
 @media only screen and (max-width: 780px) {
   #projects {
     max-width: 320px;
+  }
+
+  .section_title {
+    font-size: 30px;
   }
 
   #projects .project {
