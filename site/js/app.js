@@ -7,6 +7,7 @@ require.config({
 		'jquery':'lib/jquery.min',
 		'underscore': 'lib/underscore-min',
 		'backbone': 'lib/backbone-min',
+		'helpers':'helpers',
 		'router': 'router',
 		'text': 'lib/text'
 	},
